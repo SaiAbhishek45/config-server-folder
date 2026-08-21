@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: PRODUCT-DASHBOARD-SERVICE
+
+  cloud:
+        circuitbreaker:
+            resilience4j:
+                enabled: true
+
+server:
+  port: 8082
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+
