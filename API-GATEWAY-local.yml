@@ -1,17 +1,16 @@
 server:
   port: 8080
 
-
 spring:
- cloud:
-  gateway:
-   routes:
-     - id: product-service
-       uri: lb://PRODUCT-SERVICE
-       predicates: 
-        - Path=/product-service/**
+  cloud:
+    gateway:
+      routes:
+        - id: product-service
+          uri: lb://PRODUCT-SERVICE
+          predicates:
+            - Path=/product-service/**
 
-     -  id: dahsboard-service
-        uri: lb://PRODUCT-DASHBOARD-SERVICE
-        predicates:
-         - Path=/product-dashboard/**
+        - id: dashboard-service
+          uri: lb://PRODUCT-DASHBOARD-SERVICE
+          predicates:
+            - Path=/product-dashboard/**
